@@ -6,14 +6,16 @@
 /*   By: abestaev <abestaev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 04:33:02 by abestaev          #+#    #+#             */
-/*   Updated: 2021/01/15 14:54:38 by abestaev         ###   ########.fr       */
+/*   Updated: 2021/01/17 02:55:41 by abestaev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
+	if (!dst || !src)
+		return (0);
 	while (*src != '\0' && size - 1 != 0)
 	{
 		*dst++ = *src++;
